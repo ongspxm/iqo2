@@ -6,6 +6,18 @@
 - `SSID`: ssid obtained from iqo platform login
     - `SSID` is the key that iqOption uses for authentication. You can get it from the console using the following command: `console.log(document.cookie.split('ssid=')[1].split(';')[0]);`.
 
+### The step by step version
+1. Go on to your iqo account, and run the following script in the console: `console.log(document.cookie.split('ssid=')[1].split(';')[0]);` This will give you the ssid you require for the scripts
+1. Clone this repo
+1. create a file `.env` in the root directory
+1. Install required dependency: `npm install`
+1. Run the following command `echo "SSID from iqo" > .env`
+1. Start the script with `node index.js`
+
+Different logging information will be printed out, depending on the algorithm that you run. The default algorithm (not gonna be great) runs on all active turbo options, and you can see when the algorithm picks and decides to buy an option.
+
+The full documentation of the different tools implemented in this project is available at docs.md
+
 ## Actual buying
 The current implementation does not take into account the actual buying of the options on iqOption. The function is implemented as `buyOption(turbo, option)`. Once you have decided to go ahead with a certain strategy, the `buyOption` is always available for you, just enable it.
 
