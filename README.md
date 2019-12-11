@@ -1,7 +1,7 @@
 # IQO2
 
 ## Setting it up
-`.env` should have the following parameters:
+The following environment variables should be added to the system:
 
 - `SSID`: ssid obtained from iqo platform login
     - `SSID` is the key that iqOption uses for authentication. You can get it from the console using the following command: `console.log(document.cookie.split('ssid=')[1].split(';')[0]);`.
